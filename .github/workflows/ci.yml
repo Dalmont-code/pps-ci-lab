@@ -4,8 +4,10 @@ on:
 jobs:
   runs-on: ubuntu-latest
   steps:
+    - name: Checkout
+      uses: actions/checkout@v6
     - uses: actions/setup-java@v5
       with:
-       java-version: 25
+        java-version: 25
     - name: Build
       run: ./gradlew check
