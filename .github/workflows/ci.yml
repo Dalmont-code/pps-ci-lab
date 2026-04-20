@@ -1,0 +1,11 @@
+name: Wallaby
+on:
+  push:
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/setup-java@v5
+      with:
+       java-version: 25
+    - name: Build
+      run: ./gradlew check
