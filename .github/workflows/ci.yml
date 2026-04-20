@@ -10,5 +10,6 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           java-version: 25
+          distribution: jetbrains
       - name: Build
         run: ./gradlew check
