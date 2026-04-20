@@ -1,0 +1,13 @@
+on:
+  push
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          java-version: 25.0.2
+          distribution: 'oracle'
+      - name: Build
+        run: gradle clean build
